@@ -1,21 +1,21 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <div class="container w-100 h-100">
-        {{ mostPopularMovie }}
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="..." alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="..." alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="..." alt="Third slide">
-              </div>
+    <div class="bestMovie_container w-100">
+        <div class="row align-items-center justify-content-center">
+            <div class="col p-5">
+                <div class="bestMovie_title">
+                    {{ mostPopularMovie.title }}
+                </div>
+                <div class="bestMovie_description text-justify mt-5">
+                    {{ mostPopularMovie.overview }}
+                </div>
             </div>
-          </div>
+            <div class="col">
+                <img src="https://image.tmdb.org/t/p/w500/{{ mostPopularMovie.poster_path }}" alt="First slide" class="bestMovie_image">
+            </div>
+        </div>
+        
     </div>
     <div class="bloc_container w-100 p-2">
         <h2 class="bloc_title pl-4">Tendances actuelles</h2>
