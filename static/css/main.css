@@ -12,11 +12,21 @@ body{
     font-size: 16px;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+/* ---------------------------
+    Navbar: BEGINNING
+--------------------------- */
+.navbar-brand{
+    font-weight: 600;
+    letter-spacing: 2px;
+}
 
-/* .bloc_container{
-    background-color: lightseagreen;
-} */
+/* ---------------------------
+    Navbar: END
+--------------------------- */
 
+/* ---------------------------
+    Tendance bloc: BEGINNING
+--------------------------- */
 .bloc_title{
     font-size: 28px;
     font-weight: 600;
@@ -25,7 +35,6 @@ body{
 
 .bloc_list{
     padding: 10px 25px;
-    border: 1px solid #fff;
 }
 
 .bloc_image {
@@ -36,3 +45,7 @@ body{
     object-fit: contain;
     max-height: 270px;
 }
+
+/* ---------------------------
+    Tendance bloc: END
+--------------------------- */
