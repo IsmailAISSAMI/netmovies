@@ -1,22 +1,14 @@
 {% extends "layout.html" %}
-{% block content %}
-    <div class="bloc_container">
-        <h2 class="bloc_title">Trending</h2>
 
-        {% for movie in trending %}
-        <div class="bloc_list">
-            <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="{{ movie.title }} poster" class="bloc_image">
-            <div class="text-center">
-                <a href="/movie/{{movie.id}}">
-                    {% if movie.title %}
-                    <h4>{{ movie.title }}</h4>
-                    {% else %}
-                    <h4>{{ movie.name }}</h4>
-                    {% endif %}
-                     
+{% block content %}
+    <div class="bloc_container w-100 ml-1">
+        <h2 class="bloc_title">Tendances actuelles</h2>
+        <div class="bloc_list w-100 d-flex flex-row justify-content-evenly align-items-center flex-wrap">
+            {% for movie in trending %}
+                <a href="/movie/{{movie.id}}" class="bloc_image m-2">
+                    <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="{{ movie.title }} poster">
                 </a>
-            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 {% endblock %}

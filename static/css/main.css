@@ -1,37 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 body{
     background-color: #111;
-}
-
-
-.bloc_container{
-    margin: 0 20px;
     color: #fff;
-    background-color: lightseagreen;
+    font-size: 16px;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
+/* .bloc_container{
+    background-color: lightseagreen;
+} */
 
 .bloc_title{
-    color: #fff;
     font-size: 28px;
     font-weight: 600;
     letter-spacing: 1.3px;
 }
 
 .bloc_list{
-    border: 1px solid black;
-    max-width: 200px;
-    max-height: 150px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    padding: 10px 25px;
+    border: 1px solid #fff;
 }
 
 .bloc_image {
+    max-height: 270px;
+}
+
+.bloc_image > img {
     object-fit: contain;
-    width: 100%;
-    max-height: 100px;
+    max-height: 270px;
 }
