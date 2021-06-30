@@ -1,0 +1,6 @@
+{
+    "url":"https://api.themoviedb.org/3",
+    "key":"2e561a185b4300be1e527dbbcf9eadfd",
+    "fetchTrending": "https://api.themoviedb.org/3/trending/all/week?api_key=2e561a185b4300be1e527dbbcf9eadfd&language=fr-FR",
+    "fetchTopRated": "https://api.themoviedb.org/3/movie/top_rated?api_key=2e561a185b4300be1e527dbbcf9eadfd&language=fr-FR"
+}
