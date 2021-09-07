@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    
+    <div class="error__container">
+        <div class="error__code">404</div>
+        <h2 class="error__title">Oops! Page not found</h2>
+        <div class="error__description">What you were looking for is just not there.</div>
+        <div class="return__link">
+            Click <a href="{{ url_for('home') }}">here</a> to return to the home page!
+            
+        </div>
+    </div>
+  
+{% endblock %}

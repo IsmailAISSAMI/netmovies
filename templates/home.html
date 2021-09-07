@@ -3,12 +3,19 @@
 {% block content %}
     <div class="bestMovie_container w-100">
         <div class="row align-items-center justify-content-center">
-            <div class="col p-5">
+            <div class="col pl-5">
                 <div class="bestMovie_title">
                     {{ mostPopularMovie.title }}
                 </div>
                 <div class="bestMovie_description text-justify mt-5">
                     {{ mostPopularMovie.overview }}
+                </div>
+                <div class="bestMovie_buttons mt-4">
+                    <a href="/movie/{{mostPopularMovie.id}}" class="btn btn-secondary">Plus d'infos</a>
+                    <a href="{{mostPopularMovieTrailer}}" class="btn btn-light">
+                        <img src="{{ url_for('static', filename='images/icon_play_button.png') }}" alt="icon" class="btn__play">
+                        Trailer
+                    </a>
                 </div>
             </div>
             <div class="col">

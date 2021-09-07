@@ -1,0 +1,67 @@
+.movie_container{
+    font: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+
+/* ---------------------------
+    Left col: BEGINNING
+--------------------------- */
+.movie_poster{
+    object-fit: contain;
+    width: 100%;
+    height: 70vh;
+    min-width: 200px;
+    min-height: 400px;
+}
+.rating_table{
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+}
+.rating_table td{
+    color: gold;
+    font-size: 18px;
+}
+.rating_icon{
+    width: 27px;
+    height: 27px;
+}
+/* ---------------------------
+    Left col: END
+--------------------------- */
+
+
+/* ---------------------------
+    Rigth col: BEGINNING
+--------------------------- */
+.movie__title{
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+.release_date{
+    color: rgb(240, 94, 94);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.movie_description, .movie_info_table{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+}
+.movie_info_table, .movie_info_table a{
+    color: #fff;
+}
+.movie_table_header{
+    font-weight: 600;
+    color: rgb(240, 94, 94);
+}
+.company_logo{
+    width: 100px;
+    height: 50px;
+}
+/* ---------------------------
+    Rigth col: END
+--------------------------- */

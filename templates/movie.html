@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="movie_container mt-5 w-100">
+        <div class="row align-items-center justify-content-center">
+            <div class="col ml-4">
+                <!-- IMAGE -->
+                <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="First slide" class="movie_poster">
+                <!-- RATE -->
+                <table class="rating_table table table-borderless">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Note moyenne:</th>
+                            <td>
+                                {{ movie.vote_average}}
+                                <img src="{{ url_for('static', filename='images/icon_star.png') }}" alt="icon" class="rating_icon">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Nombre de vote:</th>
+                            <td>
+                                {{ movie.vote_count}}
+                            </td>
+                        </tr>
+                      
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-9 px-5">
+                <!-- MOVIE TITLE -->
+                <div class="movie__title">
+                    {{ movie.title }} <br>
+                    <span class="release_date">
+                        Publié le {{ movie.release_date }}                
+                    </span>
+                </div>
+                <!-- MOVIE DESCRIPTION -->
+                <div class="movie_description text-justify mt-3">
+                    {{ movie.overview }}
+                </div>
+
+                <table class="movie_info_table table table-borderless">
+                    <tbody>
+                        <!-- MOVIE GENRES -->
+                        <tr>
+                            <th scope="row" class="movie_table_header">Genres:</th>
+                            <td>
+                                {% for genre in movie.genres %}
+                                    {{ genre.name }}
+                                    <!-- Put ',' between the film genres and '.' in the end of the line -->
+                                    {{ ",  " if not loop.last else "." }}   
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <!-- MOVIE ORIGINAL LANGUAGE -->
+                        <tr>
+                            <th scope="row" class="movie_table_header">Langue originale:</th>
+                            <td>
+                                {{ movie.original_language.upper() }}
+                            </td>
+                        </tr>
+                        <!-- MOVIE POPULARITY -->
+                        <tr>
+                            <th scope="row" class="movie_table_header">Popularité:</th>
+                            <td>
+                                {{ movie.popularity }}
+                            </td>
+                        </tr>
+                        <!-- MOVIE BUDGET -->
+                        <tr>
+                            <th scope="row" class="movie_table_header">Budget:</th>
+                            <td>
+                                <!-- Converting float to a string representation of an amount of money in dollars (budget of the movie). -->
+                                {{ "{:,.1f}$".format(movie.budget) }}
+                            </td>
+                        </tr>
+                        <!-- MOVIE REVENUE -->
+                        <tr>
+                            <th scope="row" class="movie_table_header">Revenue:</th>
+                            <td>
+                                <!-- the same as for the budget. -->
+                                {{ "{:,.1f}$".format(movie.revenue) }}
+                            </td>
+                        </tr>
+
+                        <!-- MOVIE PRODUCTION COMPANIES  -->
+                        <tr>
+                            <th scope="row" class="movie_table_header">Boîte de production:</th>
+                            <td>
+                                {% for company in movie.production_companies %}
+                                    <!-- Checking if we have a logo of the company to display it, if not we do nothing -->
+                                    {% if company.logo_path is not none %}   
+                                        <img src="https://image.tmdb.org/t/p/w200/{{ company.logo_path }}" alt="Logo" class="company_logo">
+                                    {% endif %}
+                                    {{ company.name }}
+                                    <!-- Put ',' between the film genres and '.' in the end of the line -->
+                                    {{ ",  " if not loop.last else "." }}   
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <!-- MOVIE HOMEPAGE -->
+                        <tr>
+                            <th scope="row" class="movie_table_header">Page d'accueil & trailer:</th>
+                            <td>
+                                <a href="{{ movie.homepage }}">Cliquez ici!</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

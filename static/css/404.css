@@ -1,0 +1,34 @@
+.error__container{
+    color: #fff;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.error__title{
+    letter-spacing: 1.2px;
+}
+.error__code{
+    color:  rgb(240, 94, 94);
+    font-size: 150px;
+    font-family: 900;
+}
+.error__description{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.return__link, .return__link  a{
+    font-size: 22px;
+    font-weight: 800;
+}
+.return__link a{
+    color:  rgb(240, 94, 94);
+}
+.return__link  a:hover{
+    color: #111;
+    background-color: rgb(228, 228, 228);    
+    letter-spacing: 1.4px;
+    text-decoration: none;
+}
